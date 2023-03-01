@@ -7,13 +7,12 @@ cap = cv2.VideoCapture(0)
 WIDTH = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
 HEIGHT = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 
+#Størrelsen på felter
 FIELD_WIDTH = 50
 FIELD_HEIGHT = 50
 
 x_offset = int((WIDTH - FIELD_WIDTH * 8) // 2)
 y_offset = int((HEIGHT - FIELD_HEIGHT * 8) // 2)
-
-print(WIDTH, HEIGHT)
 
 def CropImage():    
     image = cv2.imread('image.png')
