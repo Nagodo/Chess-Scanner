@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Indlæser billedet
-image = cv2.imread('board1.jpg')
+image = cv2.imread('board1.png')
 
 #Gøre billedet mindre
 image = cv2.resize(image, (0,0), fx=0.25, fy=0.25)
@@ -48,7 +48,7 @@ for i in range(len(black_pixels[0])):
         black_pixels[1][i] = -1
 
 
-#Draw the black pixels
+#Laver de sorte pixels til røde
 image[black_pixels] = (0, 0, 255)
 
 
